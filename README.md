@@ -1,23 +1,22 @@
-# MarketAnalyzerAI
+MarketAnalyzerAI
 
-AI-powered console application that analyzes stock-related news sentiment.
+AI-powered console application for analyzing stock prices and news sentiment.
 
-## Overview
+MarketAnalyzerAI fetches real-time stock prices and recent news for a given ticker,
+then applies NLP sentiment analysis to calculate a sentiment score and determine short-term market bias.
+The application also plots stock price trends over a selected number of days.
 
-MarketAnalyzerAI fetches real-time stock data and recent news, 
-then applies NLP sentiment analysis to determine short-term market bias.
+Features:
+  Fetch real-time stock prices
+  Extract recent news for a stock
+  Sentiment analysis of news articles using NLP
+  Aggregated bullish / bearish / neutral bias scoring
+  Visualize stock price trends
 
-## Features
-
-- Real-time stock data via Yahoo Finance
-- News extraction
-- Sentiment analysis using HuggingFace Transformers
-- Aggregated bullish / bearish bias scoring
-
-## Tech Stack
-
-- Python
-- yfinance
-- transformers (HuggingFace)
-- torch
-- pandas
+Tech Stack
+  Python
+  pandas
+  matplotlib
+  yfinance
+  HuggingFace Transformers
+  PyTorch
