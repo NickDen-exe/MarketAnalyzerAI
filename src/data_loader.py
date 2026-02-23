@@ -1,9 +1,16 @@
 import yfinance as yf
+from datetime import datetime, timedelta
 
 def get_stock_price(ticker):
     stock = yf.Ticker(ticker)
     data = stock.history(period="1d")
     return data["Close"].iloc[-1] if not data.empty else None
+
+def get_stock_history(ticker, period_days=7):
+    stock = yf.Ticker(ticker)
+    start_date = datetime.now() - timedelta(days=period_days)
+    data = stock.history(start=start_date.strftime('%Y-%m-%d'))
+    return data if not data.empty else None
 
 def get_news(ticker):
     stock = yf.Ticker(ticker)
